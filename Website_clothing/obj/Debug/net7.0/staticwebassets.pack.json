@@ -1,6 +1,18 @@
 {
   "Files": [
     {
+      "Id": "D:\\Fpoly\\.NET\\Website_clothing\\Website_clothing\\wwwroot\\ProductImages\\kid-01.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\kid-01.jpg"
+    },
+    {
+      "Id": "D:\\Fpoly\\.NET\\Website_clothing\\Website_clothing\\wwwroot\\ProductImages\\kid-02.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\kid-02.jpg"
+    },
+    {
+      "Id": "D:\\Fpoly\\.NET\\Website_clothing\\Website_clothing\\wwwroot\\ProductImages\\kid-03.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\kid-03.jpg"
+    },
+    {
       "Id": "D:\\Fpoly\\.NET\\Website_clothing\\Website_clothing\\wwwroot\\ProductImages\\men-01.jpg",
       "PackagePath": "staticwebassets\\ProductImages\\men-01.jpg"
     },
@@ -11,6 +23,18 @@
     {
       "Id": "D:\\Fpoly\\.NET\\Website_clothing\\Website_clothing\\wwwroot\\ProductImages\\men-03.jpg",
       "PackagePath": "staticwebassets\\ProductImages\\men-03.jpg"
+    },
+    {
+      "Id": "D:\\Fpoly\\.NET\\Website_clothing\\Website_clothing\\wwwroot\\ProductImages\\women-01.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\women-01.jpg"
+    },
+    {
+      "Id": "D:\\Fpoly\\.NET\\Website_clothing\\Website_clothing\\wwwroot\\ProductImages\\women-02.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\women-02.jpg"
+    },
+    {
+      "Id": "D:\\Fpoly\\.NET\\Website_clothing\\Website_clothing\\wwwroot\\ProductImages\\women-03.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\women-03.jpg"
     },
     {
       "Id": "D:\\Fpoly\\.NET\\Website_clothing\\Website_clothing\\wwwroot\\assets\\css\\bootstrap.min.css",

@@ -1,5 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Website_clothing.IRepositories;
+using Website_clothing.IServices;
 using Website_clothing.Models;
+using Website_clothing.Repositories;
+using Website_clothing.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +11,14 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 // Đăng ký DbContext
 builder.Services.AddDbContext<Website_clothing_DbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+// Đăng ký DI
+builder.Services.AddScoped<ICRUDRepository<SanPham>, CRUDRepository<SanPham>>();
+builder.Services.AddScoped<ISanPhamService, SanPhamService>();
+builder.Services.AddScoped<ICRUDRepository<CTSanPham>, CRUDRepository<CTSanPham>>();
+builder.Services.AddScoped<ICTSanPhamService, CTSanPhamService>();
+builder.Services.AddScoped<ICRUDRepository<Hang>, CRUDRepository<Hang>>();
+builder.Services.AddScoped<IHangService, HangService>();
+builder.Services.AddScoped<CTSanPhamService>();
 
 var app = builder.Build();
 

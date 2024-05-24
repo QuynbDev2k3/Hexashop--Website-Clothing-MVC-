@@ -74,3 +74,4 @@ D:\Fpoly\.NET\Website_clothing\Website_clothing\obj\Debug\net7.0\ref\Website_clo
 D:\Fpoly\.NET\Website_clothing\Website_clothing\bin\Debug\net7.0\X.PagedList.dll
 D:\Fpoly\.NET\Website_clothing\Website_clothing\bin\Debug\net7.0\X.PagedList.Mvc.Core.dll
 D:\Fpoly\.NET\Website_clothing\Website_clothing\obj\Debug\net7.0\Website_clothing.MvcApplicationPartsAssemblyInfo.cs
+D:\Fpoly\.NET\Website_clothing\Website_clothing\obj\Debug\net7.0\Website_clothing.sourcelink.json

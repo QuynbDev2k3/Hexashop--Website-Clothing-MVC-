@@ -112,7 +112,6 @@
     </div>
 </div>
 <!-- ***** Main Banner Area End ***** -->
-
 <!-- ***** Men Area Starts ***** -->
 <section class="section" id="men">
     <div class="container">
@@ -132,29 +131,32 @@
                     <div class="owl-men-item owl-carousel">
                         @foreach (var item in Model)
                         {
-                            <div class="item">
-                                <div class="thumb">
-                                    <div class="hover-content">
-                                        <ul>
-                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
-                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
-                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                            @if (item.IDDanhMucSanPham != Guid.Parse("37149a19-73cf-4ac7-a24d-f6026afb9f02") && item.IDDanhMucSanPham != Guid.Parse("df4f2d8e-9aeb-415e-93c5-9daa937380f7"))
+                            {
+                                <div class="item">
+                                    <div class="thumb">
+                                        <div class="hover-content">
+                                            <ul>
+                                                <li><a href="@Url.Action("SingleProduct", "Home")?id=@item.ID"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <img src="../ProductImages/@item.Anh" alt="Product Image">
+                                    </div>
+                                    <div class="down-content">
+                                        <h4>@item.Ten</h4>
+                                        <span>@item.Gia</span>
+                                        <ul class="stars">
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
                                         </ul>
                                     </div>
-                                    <img src="../ProductImages/@item.Anh" alt="Product Image">
                                 </div>
-                                <div class="down-content">
-                                    <h4>@item.Ten</h4>
-                                    <span>@item.Gia</span>
-                                    <ul class="stars">
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
+                            }
                         }
                     </div>
                 </div>
@@ -163,6 +165,112 @@
     </div>
 </section>
 <!-- ***** Men Area Ends ***** -->
+<!-- ***** Women Area Starts ***** -->
+<section class="section" id="women">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="section-heading">
+                    <h2>Women's Latest</h2>
+                    <span>Details to details is what makes Hexashop different</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="men-item-carousel">
+                    <div class="owl-men-item owl-carousel">
+                        @foreach (var item in Model)
+                        {
+                            @if (item.IDDanhMucSanPham != Guid.Parse("1c25a331-d726-4675-ac94-bb2b6f3cbfb1") && item.IDDanhMucSanPham != Guid.Parse("df4f2d8e-9aeb-415e-93c5-9daa937380f7"))
+                            {
+                                <div class="item">
+                                    <div class="thumb">
+                                        <div class="hover-content">
+                                            <ul>
+                                                <li><a href="SingleProduct"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="SingleProduct"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="SingleProduct"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <img src="../ProductImages/@item.Anh" alt="Product Image">
+                                    </div>
+                                    <div class="down-content">
+                                        <h4>@item.Ten</h4>
+                                        <span>@item.Gia</span>
+                                        <ul class="stars">
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ***** Women Area Ends ***** -->
+<!-- ***** Kid Area Starts ***** -->
+<section class="section" id="kids">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="section-heading">
+                    <h2>Kid's Latest</h2>
+                    <span>Details to details is what makes Hexashop different</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="men-item-carousel">
+                    <div class="owl-men-item owl-carousel">
+                        @foreach (var item in Model)
+                        {
+                            @if (item.IDDanhMucSanPham != Guid.Parse("1c25a331-d726-4675-ac94-bb2b6f3cbfb1") && item.IDDanhMucSanPham != Guid.Parse("37149a19-73cf-4ac7-a24d-f6026afb9f02"))
+                            {
+                                <div class="item">
+                                    <div class="thumb">
+                                        <div class="hover-content">
+                                            <ul>
+                                                <li><a href="SingleProduct"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="SingleProduct"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="SingleProduct"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <img src="../ProductImages/@item.Anh" alt="Product Image">
+                                    </div>
+                                    <div class="down-content">
+                                        <h4>@item.Ten</h4>
+                                        <span>@item.Gia</span>
+                                        <ul class="stars">
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ***** Kid Area Ends ***** -->
 <!-- ***** Explore Area Starts ***** -->
 <section class="section" id="explore">
     <div class="container">
@@ -213,7 +321,6 @@
     </div>
 </section>
 <!-- ***** Explore Area Ends ***** -->
-
 <!-- ***** Social Area Starts ***** -->
 <section class="section" id="social">
     <div class="container">
