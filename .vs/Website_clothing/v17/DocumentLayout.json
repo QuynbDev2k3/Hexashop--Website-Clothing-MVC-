@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\Fpoly\\.NET\\Website_clothing\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6E00739F-DD28-4FFF-B29D-AA6EDC511015}|Website_clothing\\Website_clothing.csproj|d:\\fpoly\\.net\\website_clothing\\website_clothing\\views\\home\\products.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6E00739F-DD28-4FFF-B29D-AA6EDC511015}|Website_clothing\\Website_clothing.csproj|solutionrelative:website_clothing\\views\\home\\products.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6E00739F-DD28-4FFF-B29D-AA6EDC511015}|Website_clothing\\Website_clothing.csproj|d:\\fpoly\\.net\\website_clothing\\website_clothing\\areas\\admin\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E00739F-DD28-4FFF-B29D-AA6EDC511015}|Website_clothing\\Website_clothing.csproj|solutionrelative:website_clothing\\areas\\admin\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E00739F-DD28-4FFF-B29D-AA6EDC511015}|Website_clothing\\Website_clothing.csproj|d:\\fpoly\\.net\\website_clothing\\website_clothing\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E00739F-DD28-4FFF-B29D-AA6EDC511015}|Website_clothing\\Website_clothing.csproj|solutionrelative:website_clothing\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6E00739F-DD28-4FFF-B29D-AA6EDC511015}|Website_clothing\\Website_clothing.csproj|D:\\Fpoly\\.NET\\Website_clothing\\website_clothing\\areas\\admin\\controllers\\homeadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E00739F-DD28-4FFF-B29D-AA6EDC511015}|Website_clothing\\Website_clothing.csproj|solutionrelative:website_clothing\\areas\\admin\\controllers\\homeadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,35 +21,34 @@
           "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\Fpoly\\.NET\\Website_clothing\\Website_clothing\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Website_clothing\\Controllers\\HomeController.cs",
-              "ToolTip": "D:\\Fpoly\\.NET\\Website_clothing\\Website_clothing\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Website_clothing\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T22:42:27.829Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Products.cshtml",
-              "DocumentMoniker": "D:\\Fpoly\\.NET\\Website_clothing\\Website_clothing\\Views\\Home\\Products.cshtml",
-              "RelativeDocumentMoniker": "Website_clothing\\Views\\Home\\Products.cshtml",
-              "ToolTip": "D:\\Fpoly\\.NET\\Website_clothing\\Website_clothing\\Views\\Home\\Products.cshtml",
-              "RelativeToolTip": "Website_clothing\\Views\\Home\\Products.cshtml",
-              "ViewState": "AQIAACgAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "_LayoutAdmin.cshtml",
+              "DocumentMoniker": "D:\\Fpoly\\.NET\\Website_clothing\\Website_clothing\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "RelativeDocumentMoniker": "Website_clothing\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "ToolTip": "D:\\Fpoly\\.NET\\Website_clothing\\Website_clothing\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "RelativeToolTip": "Website_clothing\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACoBAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-22T20:08:37.373Z",
+              "WhenOpened": "2024-05-24T17:16:39.899Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeAdminController.cs",
+              "DocumentMoniker": "D:\\Fpoly\\.NET\\Website_clothing\\Website_clothing\\Areas\\Admin\\Controllers\\HomeAdminController.cs",
+              "RelativeDocumentMoniker": "Website_clothing\\Areas\\Admin\\Controllers\\HomeAdminController.cs",
+              "ToolTip": "D:\\Fpoly\\.NET\\Website_clothing\\Website_clothing\\Areas\\Admin\\Controllers\\HomeAdminController.cs",
+              "RelativeToolTip": "Website_clothing\\Areas\\Admin\\Controllers\\HomeAdminController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-24T16:35:49.199Z",
+              "EditorCaption": ""
             }
           ]
         }

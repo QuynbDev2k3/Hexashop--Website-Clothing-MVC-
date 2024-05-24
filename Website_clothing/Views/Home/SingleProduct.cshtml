@@ -46,6 +46,15 @@
                         var kichCo = Model.KichCos.FirstOrDefault(h => h.ID == item.IDKichCo)?.Ten;
                         var ChatLieu = Model.ChatLieus.FirstOrDefault(h => h.ID == item.IDChatLieu)?.Name;
                         var hang = Model.hangs.FirstOrDefault(h => h.ID == item.IDHang)?.Ten;
+                        string trangThai;
+                        @if (@item.TrangThai == true)
+                        {
+                            trangThai = "Còn hàng";
+                        }
+                        else
+                        {
+                            trangThai = "Hết hàng";
+                        }
 
                         <span class="price">Màu sắc: @mauSac</span>
                         <span class="price">Kích cỡ: @kichCo</span>
@@ -53,7 +62,7 @@
                         <span class="price">Hãng: @hang</span>
                         <span class="price">Số lượng: @item.SoLuong</span>
                         <span class="price">Tuổi: @item.Age</span>
-                        <span class="price">Trạng thái: @item.TrangThai</span>
+                        <span class="price">Trạng thái: @trangThai</span>
                         <span>Mô tả: @item.MoTa</span>
                     }
                     <div class="quote">
