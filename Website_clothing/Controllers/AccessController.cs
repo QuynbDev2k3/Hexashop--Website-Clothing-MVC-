@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 using Website_clothing.Models;
 using Website_clothing.ViewModels;
 
@@ -13,57 +16,39 @@ namespace Website_clothing.Controllers
 			_context = context;
 		}
 
-		[HttpGet]
 		public IActionResult Login()
 		{
-			if (HttpContext.Session.GetString("Email") == null)
-			{
-				return View();
-			}
-			else
+			ClaimsPrincipal claimsUser = HttpContext.User;
+			if (claimsUser.Identity.IsAuthenticated)
 			{
 				return RedirectToAction("Index", "Home");
 			}
+			return View();
 		}
 
 		[HttpPost]
-		public IActionResult Login(KhachHang khachHang, NhanVien nhanVien)
+		public async Task<IActionResult> Login(LoginViewModel loginVM)
 		{
-			if (HttpContext.Session.GetString("Email") == null)
+			if (_context.KhachHangs.Any(kh => kh.Email == loginVM.Email && kh.MatKhau == loginVM.MatKhau) || _context.NhanViens.Any(nv => nv.Email == loginVM.Email && nv.MatKhau == loginVM.MatKhau))
 			{
-				var kh = _context.KhachHangs.Where(k => k.Email.Equals(khachHang.Email) && k.MatKhau.Equals(khachHang.MatKhau)).FirstOrDefault();
-				var nv = _context.NhanViens.Where(n => n.Email.Equals(nhanVien.Email) && n.MatKhau.Equals(nhanVien.MatKhau)).FirstOrDefault();
-				var loginViewModel = new LoginViewModel
+				List<Claim> claims = new List<Claim>()
 				{
-					KhachHang = kh,
-					nhanVien = nv
+					new Claim(ClaimTypes.NameIdentifier, loginVM.Email),
+					new Claim("OtherProperties", "Example Role")
 				};
-				if (kh != null)
+				ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+				AuthenticationProperties properties = new AuthenticationProperties()
 				{
-					HttpContext.Session.SetString("Email", kh.Email.ToString());
-					return RedirectToAction("Index", "Home");
-				}
-				else if (nv != null)
-				{
-					HttpContext.Session.SetString("Email", nv.Email.ToString());
-					return RedirectToAction("Index", "HomeAdmin");
-				}
+					AllowRefresh = true,
+					IsPersistent = loginVM.KeepLoggedIn,
+				};
+				await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), properties);
+
+				return RedirectToAction("Index", "Home");
 			}
+
+			ViewData["ValidateMessage"] = "Login Fail";
 			return View();
-		}
-
-		[HttpPost]
-		public IActionResult Login(string email, string password)
-		{
-
-			return View();
-		}
-
-		public IActionResult Logout()
-		{
-			HttpContext.Session.Clear();
-			HttpContext.Session.Remove("Email");
-			return RedirectToAction("Login", "Access");
 		}
 	}
 }

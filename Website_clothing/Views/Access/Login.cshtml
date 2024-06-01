@@ -1,5 +1,5 @@
-﻿@using Website_clothing.ViewModels
-@model LoginViewModel
+﻿@model Website_clothing.ViewModels.LoginViewModel;
+
 
 @{
     Layout = null;
@@ -28,16 +28,24 @@
 
 		<!-- Sign In -->
 		<div class="container__form container--signin">
-			@* <form action="#" class="form" id="form2"> *@
-			@using (Html.BeginForm("Login", "Access", FormMethod.Post, new { @class = "form"}))
-			{
+			<form asp-controller="Access" asp-action="Login" method="post" class="form">
 				<h2 class="form__title">Sign In</h2>
-				@Html.TextBoxFor(k => k.KhachHang.Email, new { @class = "input", placeholder = "Email", required = "Required", autofocus = "Autofocus" })
-				@Html.TextBoxFor(k => k.KhachHang.MatKhau, new { @class = "input", type="password", placeholder = "Password", required = "Required", autofocus = "Autofocus" })
+				<input asp-for="Email" type="email" placeholder="Email" class="input" />
+				<input asp-for="MatKhau" type="password" placeholder="Password" class="input" />
+				<label>
+					<input type="checkbox" asp-for="KeepLoggedIn" />
+					Keep me Logged In
+				</label>
 				<a href="#" class="link">Forgot your password?</a>
-				<button class="btn" type="submit">Sign In</button>
-			}
-			@* </form> *@
+				<button type="submit" class="btn">Sign In</button>
+
+				@if (ViewData["ValidateMessage"] != null)
+				{
+					<br/>
+					<br/>
+					<label>@ViewData["ValidateMessage"]</label>
+				}
+			</form>
 		</div>
 
 		<!-- Overlay -->

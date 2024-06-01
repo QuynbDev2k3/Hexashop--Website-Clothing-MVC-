@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.EntityFrameworkCore;
 using Website_clothing.IRepositories;
 using Website_clothing.IServices;
 using Website_clothing.Models;
@@ -9,6 +10,14 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+// Add Cookies
+builder.Services.AddAuthentication(
+	CookieAuthenticationDefaults.AuthenticationScheme)
+	.AddCookie(option =>
+	{
+		option.LoginPath = "/Access/Login";
+		option.ExpireTimeSpan = TimeSpan.FromMinutes(20);
+	});
 // Đăng ký DbContext
 builder.Services.AddDbContext<Website_clothing_DbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 // Đăng ký DI
@@ -37,25 +46,27 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
+
 app.UseAuthorization();
 
 app.UseSession();
 
-//app.MapControllerRoute(
-//	name: "default",
-//	pattern: "{controller=Access}/{action=Login}/{id?}");
+app.MapControllerRoute(
+	name: "default",
+	pattern: "{controller=Access}/{action=Login}/{id?}");
 
-app.UseEndpoints(endpoints =>
-{
-	endpoints.MapGet("/", context =>
-	{
-		context.Response.Redirect("/Home/Index");
-		return Task.CompletedTask;
-	});
+//app.UseEndpoints(endpoints =>
+//{
+//    endpoints.MapGet("/", context =>
+//    {
+//        context.Response.Redirect("/Home/Index");
+//        return Task.CompletedTask;
+//    });
 
-	endpoints.MapControllerRoute(
-		name: "default",
-		pattern: "{controller=Home}/{action=Index}/{id?}");
-});
+//    endpoints.MapControllerRoute(
+//        name: "default",
+//        pattern: "{controller=Home}/{action=Index}/{id?}");
+//});
 
 app.Run();

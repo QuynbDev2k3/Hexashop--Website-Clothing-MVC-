@@ -1,10 +1,9 @@
-﻿using Website_clothing.Models;
-
-namespace Website_clothing.ViewModels
+﻿namespace Website_clothing.ViewModels
 {
     public class LoginViewModel
     {
-        public KhachHang KhachHang { get; set; }
-        public NhanVien nhanVien { get; set; }
+        public string Email { get; set; }
+        public string MatKhau { get; set; }
+        public bool KeepLoggedIn { get; set; }
     }
 }
