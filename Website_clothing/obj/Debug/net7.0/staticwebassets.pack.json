@@ -2029,6 +2029,10 @@
       "PackagePath": "staticwebassets\\ProductImages\\women-03.jpg"
     },
     {
+      "Id": "D:\\Fpoly\\.NET\\Website_clothing\\Website_clothing\\wwwroot\\assets\\css\\Login.css",
+      "PackagePath": "staticwebassets\\assets\\css\\Login.css"
+    },
+    {
       "Id": "D:\\Fpoly\\.NET\\Website_clothing\\Website_clothing\\wwwroot\\assets\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\assets\\css\\bootstrap.min.css"
     },
@@ -2267,6 +2271,10 @@
     {
       "Id": "D:\\Fpoly\\.NET\\Website_clothing\\Website_clothing\\wwwroot\\assets\\images\\women-03.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\women-03.jpg"
+    },
+    {
+      "Id": "D:\\Fpoly\\.NET\\Website_clothing\\Website_clothing\\wwwroot\\assets\\js\\Login.js",
+      "PackagePath": "staticwebassets\\assets\\js\\Login.js"
     },
     {
       "Id": "D:\\Fpoly\\.NET\\Website_clothing\\Website_clothing\\wwwroot\\assets\\js\\accordions.js",

@@ -20,14 +20,16 @@ builder.Services.AddScoped<ICRUDRepository<Hang>, CRUDRepository<Hang>>();
 builder.Services.AddScoped<IHangService, HangService>();
 builder.Services.AddScoped<CTSanPhamService>();
 
+builder.Services.AddSession();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
+	app.UseExceptionHandler("/Home/Error");
+	// The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+	app.UseHsts();
 }
 
 app.UseHttpsRedirection();
@@ -37,17 +39,23 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+app.UseSession();
+
+//app.MapControllerRoute(
+//	name: "default",
+//	pattern: "{controller=Access}/{action=Login}/{id?}");
+
 app.UseEndpoints(endpoints =>
 {
-    endpoints.MapGet("/", context =>
-    {
-        context.Response.Redirect("/Home/Index");
-        return Task.CompletedTask;
-    });
+	endpoints.MapGet("/", context =>
+	{
+		context.Response.Redirect("/Home/Index");
+		return Task.CompletedTask;
+	});
 
-    endpoints.MapControllerRoute(
-        name: "default",
-        pattern: "{controller=Home}/{action=Index}/{id?}");
+	endpoints.MapControllerRoute(
+		name: "default",
+		pattern: "{controller=Home}/{action=Index}/{id?}");
 });
 
 app.Run();
